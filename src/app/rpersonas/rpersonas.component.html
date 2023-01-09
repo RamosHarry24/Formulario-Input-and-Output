@@ -1,0 +1,36 @@
+<!-- 
+<pre>{{FormularioForm.value| json}}</pre> -->
+
+<form >
+
+    <div class="mb-2">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="name" name="nombre"  required #nombre>
+        
+    </div>
+
+    <div class="mb-2">
+        <label for="dni" class="form-label">DNI:</label>
+        <input type="text" class="form-control" id="dni" name="dni" required #dni>
+    </div>
+
+    <div class="mb-2">
+        <label for="" class="form-label">Estado Civil:</label>
+        <select name="Estado_civil" id="Estado_civil" class="form-select form-select-sm" #estado>
+
+    
+            
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="divorciado">Divorciado</option>
+            <option value="viudo">Viudo</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div class="d-grid gap-2 col-4 float-start">
+
+        <button (click)="onEnviar(nombre.value,dni.value,estado.value)" type="submit" [className]="btnColor">Send</button>
+    </div>
+</form>
+
